@@ -1,0 +1,69 @@
+/* App.css */
+.app-container {
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  background: url("/Messi.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft glow overlay */
+.app-container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: inset 0 0 120px rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin: 25px 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Navigation bar */
+.nav-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-bar button {
+  padding: 12px 20px;
+  border: none;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+  transition: all 0.3s ease;
+}
+
+.nav-bar button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(46, 204, 113, 0.8);
+}
+
+/* Page content */
+.page-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  width: 80%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
